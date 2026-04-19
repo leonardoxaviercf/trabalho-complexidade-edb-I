@@ -1,3 +1,5 @@
 /output/
 test.cpp
 *.exe
+/resultados/*
+!/resultados/.gitkeep
