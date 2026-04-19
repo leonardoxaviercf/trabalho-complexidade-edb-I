@@ -51,3 +51,23 @@ void mergeSort(vector<int>& vet, int esquerda, int direita) {
         merge(vet, esquerda, meio, direita);
     }
 }
+
+void selectionSort(std::vector<int>& vet) {
+    int n = (int)vet.size();
+
+    for (int i = 0; i < n - 1; i++) {
+        int menorIndice = i;
+
+        for (int j = i + 1; j < n; j++) {
+            if (vet[j] < vet[menorIndice]) {
+                menorIndice = j;
+            }
+        }
+
+        if (menorIndice != i) {
+            int temp = vet[i];
+            vet[i] = vet[menorIndice];
+            vet[menorIndice] = temp;
+        }
+    }
+}
